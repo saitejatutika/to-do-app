@@ -5,7 +5,7 @@
 
   <ul>
     <li *ngFor="let todo of todos">
-      <span [class.completed]="todo.completed">{{ todo.text }}</span>
+      <textarea [disabled]="true" [class.completed]="todo.completed">{{ todo.text }}</textarea>
       <button (click)="toggleComplete(todo)">Complete</button>
       <button (click)="deleteTodo(todo.id)">Delete</button>
     </li>
