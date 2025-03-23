@@ -56,6 +56,7 @@ export class TodoComponent implements OnInit {
 
   deleteTodo(id: string) {
     this.firestoreCollection.doc(id).delete();
+    this.loadTodos();
   }
 
   toggleComplete(todo: any) {
